@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #f8fafc;
+    --muted: #cbd5e1;
+    --accent: #38bdf8;
+    --border: #334155;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.back-btn {
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 9px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: var(--accent);
+    color: #0f172a;
+}
+
+/* Project Hero */
+.project-hero {
+    padding: 85px 8% 65px;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a, #172554);
+}
+
+.tag {
+    display: inline-block;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.project-hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.intro {
+    max-width: 750px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+/* Tools */
+.tools {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.tools span {
+    background: var(--card);
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* Content Sections */
+.project-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.project-section p,
+.project-section li {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.project-section ul {
+    padding-left: 22px;
+}
+
+.project-section li {
+    margin-bottom: 10px;
+}
+
+/* Statistics */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.stat-card {
+    background: var(--card);
+    padding: 25px 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    color: var(--accent);
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 14px;
+}
+
+/* Technology Cards */
+.tool-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.tool-details div {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.tool-details h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* GitHub Button */
+.github-section {
+    text-align: center;
+}
+
+.primary-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--accent);
+    color: #0f172a;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px #38bdf833;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: var(--muted);
+    background: #0b1120;
+}
+
+/* Mobile Responsive */
+@media (max-width: 700px) {
+    .header {
+        padding: 18px 5%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .back-btn {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .project-hero {
+        padding: 60px 5% 45px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .project-section {
+        padding: 40px 6%;
+    }
+
+    .project-section h2 {
+        font-size: 24px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-details {
+        grid-template-columns: 1fr;
+    }
+}
+.dashboard-image {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.dashboard-image img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+body.light-mode {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --accent: #0284c7;
+    --border: #cbd5e1;
+}
+
+body.light-mode .project-hero {
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+}
+
+body.light-mode footer {
+    background: #e2e8f0;
+}
